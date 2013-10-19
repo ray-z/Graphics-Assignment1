@@ -23,6 +23,13 @@ public:
     //This is a public method called to check if the co-ordinates are inside the shape
     bool inside(int x, int y);
 
+    //Set input to tempMatrix
+    void setTempMatrix(GLdouble value, int r, int c);
+
+    void calTransformMatrix();
+
+    void testTransformation();
+
 private:
     //This is a pure virtual function (indicated by = 0), which is defined by the
     //derived classes, e.g. square. The drawn shape should be centred on (0, 0)
@@ -37,6 +44,13 @@ private:
 
     QColor mNormalColour;
     QColor mSelectedColour;
+
+    //Matrix of current status
+    GLdouble mMatrix[4][4];
+    //Matrix from user input
+    GLdouble tempMatrix[4][4];
+
+    void resetTempMatrix();
 };
 
 #endif 
