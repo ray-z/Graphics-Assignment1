@@ -137,24 +137,6 @@ bool shape::inside(int x, int y)
 
 void shape::resetMatrix(GLdouble m[4][4])
 {
-    /*
-    tempMatrix[0][0] = 1;
-    tempMatrix[0][1] = 0;
-    tempMatrix[0][2] = 0;
-    tempMatrix[0][3] = 0;
-    tempMatrix[1][0] = 0;
-    tempMatrix[1][1] = 1;
-    tempMatrix[1][2] = 0;
-    tempMatrix[1][3] = 0;
-    tempMatrix[2][0] = 0;
-    tempMatrix[2][1] = 0;
-    tempMatrix[2][2] = 1;
-    tempMatrix[2][3] = 0;
-    tempMatrix[3][0] = 0;
-    tempMatrix[3][1] = 0;
-    tempMatrix[3][2] = 0;
-    tempMatrix[3][3] = 1;
-    */
     m[0][0] = 1;
     m[0][1] = 0;
     m[0][2] = 0;
@@ -171,12 +153,19 @@ void shape::resetMatrix(GLdouble m[4][4])
     m[3][1] = 0;
     m[3][2] = 0;
     m[3][3] = 1;
-
 }
 
 void shape::setTempMatrix(GLdouble value, int r, int c)
 {
     tempMatrix[r][c] = value;
+    for(int i=0; i<4; i++)
+    {
+        for(int j=0; j<4; j++)
+        {
+            std::cerr<< tempMatrix[i][j]<<" ";
+        }
+        std::cerr<<"\n";
+    }
 }
 
 void shape::calTransformMatrix()
@@ -194,24 +183,7 @@ void shape::calTransformMatrix()
             }
         }
     }
-    /*
-    for(int r=0; r<4; r++)
-    {
-        for(int c=0; c<4; c++)
-        {
-            mMatrix[r][c] = newMatrix[r][c];
-        }
-    }
-    */
     memcpy(mMatrix, newMatrix, sizeof(mMatrix));
-    for(int i=0; i<4; i++)
-    {
-        for(int j=0; j<4; j++)
-        {
-            std::cerr<< newMatrix[i][j]<<" ";
-        }
-        std::cerr<<"\n";
-    }
 }
 
 void shape::testTransformation()

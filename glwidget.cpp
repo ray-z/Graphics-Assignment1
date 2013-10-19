@@ -208,52 +208,83 @@ void GLWidget::storeSides(int i)
 
 void GLWidget::transformShape()
 {
-    mSelectedShape->calTransformMatrix();
-    //mSelectedShape->testTransformation();
-    updateGL();
+    if(!mSelectedShape.isNull())
+    {
+        mSelectedShape->calTransformMatrix();
+        //mSelectedShape->testTransformation();
+        updateGL();
+    }
 }
 
 void GLWidget::getInput00(QString s)
 {
-    mSelectedShape->setTempMatrix(s.toDouble(), 0, 0);
+    if(!mSelectedShape.isNull())
+    {
+        mSelectedShape->setTempMatrix(s.toDouble(), 0, 0);
+    }
 }
 
 void GLWidget::getInput01(QString s)
 {
-    mSelectedShape->setTempMatrix(s.toDouble(), 0, 1);
+    if(!mSelectedShape.isNull())
+    {
+        mSelectedShape->setTempMatrix(s.toDouble(), 0, 1);
+    }
 }
 
 void GLWidget::getInput02(QString s)
 {
-    mSelectedShape->setTempMatrix(s.toDouble(), 0, 3);
+    if(!mSelectedShape.isNull())
+    {
+        mSelectedShape->setTempMatrix(s.toDouble(), 0, 3);
+    }
 }
 
 void GLWidget::getInput10(QString s)
 {
-    mSelectedShape->setTempMatrix(s.toDouble(), 1, 0);
+    if(!mSelectedShape.isNull())
+    {
+        mSelectedShape->setTempMatrix(s.toDouble(), 1, 0);
+    }
 }
 
 void GLWidget::getInput11(QString s)
 {
-    mSelectedShape->setTempMatrix(s.toDouble(), 1, 1);
+    if(!mSelectedShape.isNull())
+    {
+        mSelectedShape->setTempMatrix(s.toDouble(), 1, 1);
+
+    }
 }
 
 void GLWidget::getInput12(QString s)
 {
-    mSelectedShape->setTempMatrix(s.toDouble(), 1, 3);
+    if(!mSelectedShape.isNull())
+    {
+        mSelectedShape->setTempMatrix(s.toDouble(), 1, 3);
+    }
 }
 
 void GLWidget::getInput20(QString s)
 {
-    mSelectedShape->setTempMatrix(s.toDouble(), 3, 0);
+    if(!mSelectedShape.isNull())
+    {
+        mSelectedShape->setTempMatrix(s.toDouble(), 3, 0);
+    }
 }
 
 void GLWidget::getInput21(QString s)
 {
-    mSelectedShape->setTempMatrix(s.toDouble(), 3, 1);
+    if(!mSelectedShape.isNull())
+    {
+        mSelectedShape->setTempMatrix(s.toDouble(), 3, 1);
+    }
 }
 
 void GLWidget::getInput22(QString s)
 {
-    mSelectedShape->setTempMatrix(s.toDouble(), 3, 3);
+    if(!mSelectedShape.isNull())
+    {
+        mSelectedShape->setTempMatrix(s.toDouble(), 3, 3);
+    }
 }
