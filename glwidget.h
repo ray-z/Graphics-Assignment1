@@ -62,7 +62,10 @@ public slots:
     void clear();
     void newCircle();
     void newSquare();
+    //Draw ne polygon
     void newPolygon();
+    //Store sides of polygon
+    void storeSides(int i);
 };
 
 
