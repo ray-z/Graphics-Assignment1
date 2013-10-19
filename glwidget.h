@@ -55,10 +55,14 @@ private:
     static const double ZMin;
     static const double ZMax;
 
+    //Store polygon sides
+    int pSides;
+
 public slots:
     void clear();
     void newCircle();
     void newSquare();
+    void newPolygon();
 };
 
 

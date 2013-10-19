@@ -4,6 +4,7 @@
 #include "circle.h"
 #include "glwidget.h"
 #include "square.h"
+#include "polygon.h"
 
 const double GLWidget::ZMin = -10.0;
 const double GLWidget::ZMax = 10.0;
@@ -15,6 +16,7 @@ GLWidget::GLWidget(QWidget *parent)
       mShapeColour(255, 0, 0),
       mHighlightColour(0, 0, 0)
 {
+    pSides = 3;
 }
 
 void GLWidget::initializeGL()
@@ -182,6 +184,20 @@ void GLWidget::newCircle()
 
     //Add it to the list of shapes
     mShapes.push_back(newCircle);
+
+    updateGL();
+}
+
+//Draw ne polygon
+void GLWidget::newPolygon()
+{
+    const int defaultRadius = 100;
+    //Create a new Polygon and make it a QSharedPointer
+    shape_ptr newPolygon(new polygon(width()/2, height()/2,
+                                   mShapeColour, mHighlightColour, defaultRadius, pSides));
+
+    //Add it to the list of shapes
+    mShapes.push_back(newPolygon);
 
     updateGL();
 }
