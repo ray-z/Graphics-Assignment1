@@ -205,3 +205,86 @@ void GLWidget::storeSides(int i)
 {
     pSides = i;
 }
+
+void GLWidget::transformShape()
+{
+    if(!mSelectedShape.isNull())
+    {
+        mSelectedShape->calTransformMatrix();
+        //mSelectedShape->testTransformation();
+        updateGL();
+    }
+}
+
+void GLWidget::getInput00(QString s)
+{
+    if(!mSelectedShape.isNull())
+    {
+        mSelectedShape->setTempMatrix(s.toDouble(), 0, 0);
+    }
+}
+
+void GLWidget::getInput01(QString s)
+{
+    if(!mSelectedShape.isNull())
+    {
+        mSelectedShape->setTempMatrix(s.toDouble(), 0, 1);
+    }
+}
+
+void GLWidget::getInput02(QString s)
+{
+    if(!mSelectedShape.isNull())
+    {
+        mSelectedShape->setTempMatrix(s.toDouble(), 0, 3);
+    }
+}
+
+void GLWidget::getInput10(QString s)
+{
+    if(!mSelectedShape.isNull())
+    {
+        mSelectedShape->setTempMatrix(s.toDouble(), 1, 0);
+    }
+}
+
+void GLWidget::getInput11(QString s)
+{
+    if(!mSelectedShape.isNull())
+    {
+        mSelectedShape->setTempMatrix(s.toDouble(), 1, 1);
+
+    }
+}
+
+void GLWidget::getInput12(QString s)
+{
+    if(!mSelectedShape.isNull())
+    {
+        mSelectedShape->setTempMatrix(s.toDouble(), 1, 3);
+    }
+}
+
+void GLWidget::getInput20(QString s)
+{
+    if(!mSelectedShape.isNull())
+    {
+        mSelectedShape->setTempMatrix(s.toDouble(), 3, 0);
+    }
+}
+
+void GLWidget::getInput21(QString s)
+{
+    if(!mSelectedShape.isNull())
+    {
+        mSelectedShape->setTempMatrix(s.toDouble(), 3, 1);
+    }
+}
+
+void GLWidget::getInput22(QString s)
+{
+    if(!mSelectedShape.isNull())
+    {
+        mSelectedShape->setTempMatrix(s.toDouble(), 3, 3);
+    }
+}
