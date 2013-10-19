@@ -208,8 +208,8 @@ void GLWidget::storeSides(int i)
 
 void GLWidget::transformShape()
 {
-    //mSelectedShape->calTransformMatrix();
-    mSelectedShape->testTransformation();
+    mSelectedShape->calTransformMatrix();
+    //mSelectedShape->testTransformation();
     updateGL();
 }
 

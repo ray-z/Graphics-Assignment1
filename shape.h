@@ -49,8 +49,8 @@ private:
     GLdouble mMatrix[4][4];
     //Matrix from user input
     GLdouble tempMatrix[4][4];
-
-    void resetTempMatrix();
+    GLdouble testMatrix[16];
+    void resetMatrix(GLdouble m[4][4]);
 };
 
 #endif 

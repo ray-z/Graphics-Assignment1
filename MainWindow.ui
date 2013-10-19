@@ -506,7 +506,7 @@
    <sender>lineEdit_6</sender>
    <signal>textChanged(QString)</signal>
    <receiver>widget</receiver>
-   <slot>getInput20(QString)</slot>
+   <slot>getInput12(QString)</slot>
    <hints>
     <hint type="sourcelabel">
      <x>161</x>
