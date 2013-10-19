@@ -188,7 +188,6 @@ void GLWidget::newCircle()
     updateGL();
 }
 
-//Draw ne polygon
 void GLWidget::newPolygon()
 {
     const int defaultRadius = 100;
@@ -200,4 +199,9 @@ void GLWidget::newPolygon()
     mShapes.push_back(newPolygon);
 
     updateGL();
+}
+
+void GLWidget::storeSides(int i)
+{
+    pSides = i;
 }
