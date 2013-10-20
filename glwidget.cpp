@@ -216,6 +216,7 @@ void GLWidget::transformShape()
     }
 }
 
+/*
 void GLWidget::getInput00(QString s)
 {
     if(!mSelectedShape.isNull())
@@ -288,3 +289,4 @@ void GLWidget::getInput22(QString s)
         mSelectedShape->setTempMatrix(s.toDouble(), 3, 3);
     }
 }
+*/

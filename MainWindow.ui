@@ -279,16 +279,6 @@
     <slot>newPolygon()</slot>
     <slot>storeSides(int)</slot>
     <slot>transformShape()</slot>
-    <slot>getInput00(QString)</slot>
-    <slot>getInput01(QString)</slot>
-    <slot>getInput02(QString)</slot>
-    <slot>getInput03(QString)</slot>
-    <slot>getInput10(QString)</slot>
-    <slot>getInput11(QString)</slot>
-    <slot>getInput12(QString)</slot>
-    <slot>getInput20(QString)</slot>
-    <slot>getInput21(QString)</slot>
-    <slot>getInput22(QString)</slot>
    </slots>
   </customwidget>
  </customwidgets>
@@ -422,150 +412,6 @@
     </hint>
    </hints>
   </connection>
-  <connection>
-   <sender>lineEdit</sender>
-   <signal>textChanged(QString)</signal>
-   <receiver>widget</receiver>
-   <slot>getInput00(QString)</slot>
-   <hints>
-    <hint type="sourcelabel">
-     <x>57</x>
-     <y>457</y>
-    </hint>
-    <hint type="destinationlabel">
-     <x>199</x>
-     <y>425</y>
-    </hint>
-   </hints>
-  </connection>
-  <connection>
-   <sender>lineEdit_2</sender>
-   <signal>textChanged(QString)</signal>
-   <receiver>widget</receiver>
-   <slot>getInput01(QString)</slot>
-   <hints>
-    <hint type="sourcelabel">
-     <x>102</x>
-     <y>461</y>
-    </hint>
-    <hint type="destinationlabel">
-     <x>196</x>
-     <y>464</y>
-    </hint>
-   </hints>
-  </connection>
-  <connection>
-   <sender>lineEdit_3</sender>
-   <signal>textChanged(QString)</signal>
-   <receiver>widget</receiver>
-   <slot>getInput02(QString)</slot>
-   <hints>
-    <hint type="sourcelabel">
-     <x>171</x>
-     <y>449</y>
-    </hint>
-    <hint type="destinationlabel">
-     <x>222</x>
-     <y>496</y>
-    </hint>
-   </hints>
-  </connection>
-  <connection>
-   <sender>lineEdit_4</sender>
-   <signal>textChanged(QString)</signal>
-   <receiver>widget</receiver>
-   <slot>getInput10(QString)</slot>
-   <hints>
-    <hint type="sourcelabel">
-     <x>29</x>
-     <y>504</y>
-    </hint>
-    <hint type="destinationlabel">
-     <x>211</x>
-     <y>659</y>
-    </hint>
-   </hints>
-  </connection>
-  <connection>
-   <sender>lineEdit_5</sender>
-   <signal>textChanged(QString)</signal>
-   <receiver>widget</receiver>
-   <slot>getInput11(QString)</slot>
-   <hints>
-    <hint type="sourcelabel">
-     <x>110</x>
-     <y>500</y>
-    </hint>
-    <hint type="destinationlabel">
-     <x>254</x>
-     <y>626</y>
-    </hint>
-   </hints>
-  </connection>
-  <connection>
-   <sender>lineEdit_6</sender>
-   <signal>textChanged(QString)</signal>
-   <receiver>widget</receiver>
-   <slot>getInput12(QString)</slot>
-   <hints>
-    <hint type="sourcelabel">
-     <x>161</x>
-     <y>506</y>
-    </hint>
-    <hint type="destinationlabel">
-     <x>203</x>
-     <y>599</y>
-    </hint>
-   </hints>
-  </connection>
-  <connection>
-   <sender>lineEdit_7</sender>
-   <signal>textChanged(QString)</signal>
-   <receiver>widget</receiver>
-   <slot>getInput20(QString)</slot>
-   <hints>
-    <hint type="sourcelabel">
-     <x>36</x>
-     <y>545</y>
-    </hint>
-    <hint type="destinationlabel">
-     <x>222</x>
-     <y>734</y>
-    </hint>
-   </hints>
-  </connection>
-  <connection>
-   <sender>lineEdit_8</sender>
-   <signal>textChanged(QString)</signal>
-   <receiver>widget</receiver>
-   <slot>getInput21(QString)</slot>
-   <hints>
-    <hint type="sourcelabel">
-     <x>92</x>
-     <y>545</y>
-    </hint>
-    <hint type="destinationlabel">
-     <x>210</x>
-     <y>709</y>
-    </hint>
-   </hints>
-  </connection>
-  <connection>
-   <sender>lineEdit_9</sender>
-   <signal>textChanged(QString)</signal>
-   <receiver>widget</receiver>
-   <slot>getInput22(QString)</slot>
-   <hints>
-    <hint type="sourcelabel">
-     <x>151</x>
-     <y>548</y>
-    </hint>
-    <hint type="destinationlabel">
-     <x>209</x>
-     <y>693</y>
-    </hint>
-   </hints>
-  </connection>
  </connections>
  <slots>
   <slot>colourHex()</slot>
@@ -587,5 +433,6 @@
   <slot>pressmebut()</slot>
   <slot>txt9(QString)</slot>
   <slot>txt99()</slot>
+  <slot>getInput00(QString)</slot>
  </slots>
 </ui>

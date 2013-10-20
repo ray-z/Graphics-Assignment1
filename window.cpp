@@ -12,7 +12,7 @@ Window::Window(QWidget *parent):QDialog(parent)
 {
 	//Setup application interface. Creates all the required components and sliders.
 	setupUi(this);
-
+    resetMatrix();
     //We need to attach our m_glWidget to glWidgetArea
     //All our drawings will be on glWidgetArea
    //glWidgetArea->setWidget(&mGLWidget);
@@ -83,4 +83,82 @@ void Window::aboutBut()
 void Window::pressmebut()
 {
     std::cerr << "Don't press me!";
+}
+
+void Window::resetMatrix()
+{
+    inputMatrix[0][0] = 1;
+    inputMatrix[0][1] = 0;
+    inputMatrix[0][2] = 0;
+    inputMatrix[0][3] = 0;
+    inputMatrix[1][0] = 0;
+    inputMatrix[1][1] = 1;
+    inputMatrix[1][2] = 0;
+    inputMatrix[1][3] = 0;
+    inputMatrix[2][0] = 0;
+    inputMatrix[2][1] = 0;
+    inputMatrix[2][2] = 1;
+    inputMatrix[2][3] = 0;
+    inputMatrix[3][0] = 0;
+    inputMatrix[3][1] = 0;
+    inputMatrix[3][2] = 0;
+    inputMatrix[3][3] = 1;
+}
+
+void Window::setMatrix(GLdouble value, int r, int c)
+{
+    inputMatrix[r][c] = value;
+    for(int i=0; i<4; i++)
+    {
+        for(int j=0; j<4; j++)
+        {
+            std::cerr<< inputMatrix[i][j]<<" ";
+        }
+        std::cerr<<"\n";
+    }
+}
+
+void Window::getInput00(QString s)
+{
+    setMatrix(s.toDouble(), 0, 0);
+}
+
+void Window::getInput01(QString s)
+{
+    setMatrix(s.toDouble(), 0, 1);
+}
+
+void Window::getInput02(QString s)
+{
+    setMatrix(s.toDouble(), 0, 3);
+}
+
+void Window::getInput10(QString s)
+{
+    setMatrix(s.toDouble(), 1, 0);
+}
+
+void Window::getInput11(QString s)
+{
+    setMatrix(s.toDouble(), 1, 1);
+}
+
+void Window::getInput12(QString s)
+{
+    setMatrix(s.toDouble(), 1, 3);
+}
+
+void Window::getInput20(QString s)
+{
+    setMatrix(s.toDouble(), 3, 0);
+}
+
+void Window::getInput21(QString s)
+{
+    setMatrix(s.toDouble(), 3, 1);
+}
+
+void Window::getInput22(QString s)
+{
+    setMatrix(s.toDouble(), 3, 3);
 }
