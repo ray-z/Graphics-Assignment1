@@ -21,15 +21,30 @@ class Window : public QDialog, public Ui::frmMain
 public:
     //Constructor
     Window(QWidget *parent = 0);
-
+    ~Window();
 private:
     //GLWidget instance---by storing an instance, the widget is automatically created
     //and cleared up when the Window class is instantiated (i.e. no need for new/delete)
     GLWidget mGLWidget;
 
+    Ui::frmMain *ui;
+    //Store input matrix
+    GLdouble inputMatrix[4][4];
+
+public slots:
+    //Store input matrix
+    void storeMatrix();
+    void sendToWidget();
+
 private slots:
     void aboutBut();
     void pressmebut();
+    //Reset QLineEdit
+    void resetTxt();
+    //Reset matrix
+    void resetMatrix();
+    //Set matrix value
+    void setMatrix(QString value, int r, int c);
 
 protected:
     // void  resizeEvent(QResizeEvent * );

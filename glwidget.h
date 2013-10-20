@@ -68,6 +68,7 @@ public slots:
     void storeSides(int i);
     //Transform using matrix
     void transformShape();
+    /*
     //Store input matrix
     void getInput00(QString);
     void getInput01(QString);
@@ -78,6 +79,8 @@ public slots:
     void getInput20(QString);
     void getInput21(QString);
     void getInput22(QString);
+    */
+    void sendToShape(GLdouble m[4][4]);
 };
 
 

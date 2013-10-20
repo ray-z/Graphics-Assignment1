@@ -216,6 +216,18 @@ void GLWidget::transformShape()
     }
 }
 
+void GLWidget::sendToShape(GLdouble m[4][4])
+{
+    if(!mSelectedShape.isNull())
+    {
+        mSelectedShape->transform(m);
+        //mSelectedShape->testTransformation();
+        updateGL();
+
+    }
+}
+
+/*
 void GLWidget::getInput00(QString s)
 {
     if(!mSelectedShape.isNull())
@@ -288,3 +300,4 @@ void GLWidget::getInput22(QString s)
         mSelectedShape->setTempMatrix(s.toDouble(), 3, 3);
     }
 }
+*/
