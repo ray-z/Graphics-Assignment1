@@ -216,6 +216,17 @@ void GLWidget::transformShape()
     }
 }
 
+void GLWidget::sendToShape(GLdouble m[4][4])
+{
+    if(!mSelectedShape.isNull())
+    {
+        mSelectedShape->transform(m);
+        //mSelectedShape->testTransformation();
+        updateGL();
+
+    }
+}
+
 /*
 void GLWidget::getInput00(QString s)
 {

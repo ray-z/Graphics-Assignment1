@@ -159,7 +159,7 @@
       </property>
       <layout class="QGridLayout" name="gridLayout_3">
        <item row="1" column="1">
-        <widget class="QLineEdit" name="lineEdit_5">
+        <widget class="QLineEdit" name="lineEdit11">
          <property name="text">
           <string>1</string>
          </property>
@@ -169,7 +169,7 @@
         </widget>
        </item>
        <item row="1" column="0">
-        <widget class="QLineEdit" name="lineEdit_4">
+        <widget class="QLineEdit" name="lineEdit10">
          <property name="text">
           <string>0</string>
          </property>
@@ -179,7 +179,7 @@
         </widget>
        </item>
        <item row="1" column="2">
-        <widget class="QLineEdit" name="lineEdit_6">
+        <widget class="QLineEdit" name="lineEdit12">
          <property name="text">
           <string>0</string>
          </property>
@@ -189,7 +189,7 @@
         </widget>
        </item>
        <item row="0" column="2">
-        <widget class="QLineEdit" name="lineEdit_3">
+        <widget class="QLineEdit" name="lineEdit02">
          <property name="text">
           <string>0</string>
          </property>
@@ -199,7 +199,7 @@
         </widget>
        </item>
        <item row="0" column="1">
-        <widget class="QLineEdit" name="lineEdit_2">
+        <widget class="QLineEdit" name="lineEdit01">
          <property name="text">
           <string>0</string>
          </property>
@@ -209,7 +209,7 @@
         </widget>
        </item>
        <item row="2" column="0">
-        <widget class="QLineEdit" name="lineEdit_7">
+        <widget class="QLineEdit" name="lineEdit20">
          <property name="text">
           <string>0</string>
          </property>
@@ -219,7 +219,7 @@
         </widget>
        </item>
        <item row="2" column="1">
-        <widget class="QLineEdit" name="lineEdit_8">
+        <widget class="QLineEdit" name="lineEdit21">
          <property name="text">
           <string>0</string>
          </property>
@@ -229,7 +229,7 @@
         </widget>
        </item>
        <item row="2" column="2">
-        <widget class="QLineEdit" name="lineEdit_9">
+        <widget class="QLineEdit" name="lineEdit22">
          <property name="text">
           <string>1</string>
          </property>
@@ -239,7 +239,7 @@
         </widget>
        </item>
        <item row="0" column="0">
-        <widget class="QLineEdit" name="lineEdit">
+        <widget class="QLineEdit" name="lineEdit00">
          <property name="text">
           <string>1</string>
          </property>
@@ -254,13 +254,26 @@
       <property name="geometry">
        <rect>
         <x>30</x>
-        <y>550</y>
+        <y>560</y>
         <width>111</width>
         <height>31</height>
        </rect>
       </property>
       <property name="text">
        <string>Transform</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="pushButton_3">
+      <property name="geometry">
+       <rect>
+        <x>30</x>
+        <y>600</y>
+        <width>111</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Store</string>
       </property>
      </widget>
     </widget>
@@ -279,6 +292,16 @@
     <slot>newPolygon()</slot>
     <slot>storeSides(int)</slot>
     <slot>transformShape()</slot>
+    <slot>getInput00(QString)</slot>
+    <slot>getInput01(QString)</slot>
+    <slot>getInput02(QString)</slot>
+    <slot>getInput03(QString)</slot>
+    <slot>getInput10(QString)</slot>
+    <slot>getInput11(QString)</slot>
+    <slot>getInput12(QString)</slot>
+    <slot>getInput20(QString)</slot>
+    <slot>getInput21(QString)</slot>
+    <slot>getInput22(QString)</slot>
    </slots>
   </customwidget>
  </customwidgets>
@@ -397,18 +420,34 @@
    </hints>
   </connection>
   <connection>
+   <sender>pushButton_3</sender>
+   <signal>clicked()</signal>
+   <receiver>frmMain</receiver>
+   <slot>storeMatrix()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>115</x>
+     <y>625</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>193</x>
+     <y>608</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
    <sender>pushButton_2</sender>
    <signal>clicked()</signal>
-   <receiver>widget</receiver>
-   <slot>transformShape()</slot>
+   <receiver>frmMain</receiver>
+   <slot>sendToWidget()</slot>
    <hints>
     <hint type="sourcelabel">
      <x>133</x>
-     <y>580</y>
+     <y>587</y>
     </hint>
     <hint type="destinationlabel">
-     <x>257</x>
-     <y>561</y>
+     <x>191</x>
+     <y>569</y>
     </hint>
    </hints>
   </connection>
@@ -433,6 +472,7 @@
   <slot>pressmebut()</slot>
   <slot>txt9(QString)</slot>
   <slot>txt99()</slot>
-  <slot>getInput00(QString)</slot>
+  <slot>storeMatrix()</slot>
+  <slot>sendToWidget()</slot>
  </slots>
 </ui>

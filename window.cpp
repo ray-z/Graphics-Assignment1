@@ -3,6 +3,7 @@
 #include <QtOpenGL>
 #include "version.h"
 #include "window.h"
+#include "glwidget.h"
 //#include "dfuncs.h"
 
 //------------------------------------------------------------------------------------
@@ -11,13 +12,18 @@
 Window::Window(QWidget *parent):QDialog(parent)
 {
 	//Setup application interface. Creates all the required components and sliders.
-	setupUi(this);
+    ui = new Ui::frmMain;
+    ui->setupUi(this);
+
     resetMatrix();
     //We need to attach our m_glWidget to glWidgetArea
     //All our drawings will be on glWidgetArea
    //glWidgetArea->setWidget(&mGLWidget);
 }
-
+Window::~Window()
+{
+    delete ui;
+}
 //void Window::resizeEvent( QResizeEvent * )
 //{
 //  cerr << "new size "<< width() SEP height() NL;
@@ -85,6 +91,19 @@ void Window::pressmebut()
     std::cerr << "Don't press me!";
 }
 
+void Window::resetTxt()
+{
+    ui->lineEdit00->setText("1");
+    ui->lineEdit01->setText("0");
+    ui->lineEdit02->setText("0");
+    ui->lineEdit10->setText("0");
+    ui->lineEdit11->setText("1");
+    ui->lineEdit12->setText("0");
+    ui->lineEdit20->setText("0");
+    ui->lineEdit21->setText("0");
+    ui->lineEdit22->setText("1");
+}
+
 void Window::resetMatrix()
 {
     inputMatrix[0][0] = 1;
@@ -105,60 +124,27 @@ void Window::resetMatrix()
     inputMatrix[3][3] = 1;
 }
 
-void Window::setMatrix(GLdouble value, int r, int c)
+void Window::setMatrix(QString value, int r, int c)
 {
-    inputMatrix[r][c] = value;
-    for(int i=0; i<4; i++)
-    {
-        for(int j=0; j<4; j++)
-        {
-            std::cerr<< inputMatrix[i][j]<<" ";
-        }
-        std::cerr<<"\n";
-    }
+    inputMatrix[r][c] = value.toDouble();
 }
 
-void Window::getInput00(QString s)
+void Window::storeMatrix()
 {
-    setMatrix(s.toDouble(), 0, 0);
+    setMatrix(ui->lineEdit00->text(), 0, 0);
+    setMatrix(ui->lineEdit01->text(), 0, 1);
+    setMatrix(ui->lineEdit02->text(), 0, 3);
+    setMatrix(ui->lineEdit10->text(), 1, 0);
+    setMatrix(ui->lineEdit11->text(), 1, 1);
+    setMatrix(ui->lineEdit12->text(), 1, 3);
+    setMatrix(ui->lineEdit20->text(), 3, 0);
+    setMatrix(ui->lineEdit21->text(), 3, 1);
+    setMatrix(ui->lineEdit22->text(), 3, 3);
+    resetTxt();
 }
 
-void Window::getInput01(QString s)
+void Window::sendToWidget()
 {
-    setMatrix(s.toDouble(), 0, 1);
-}
-
-void Window::getInput02(QString s)
-{
-    setMatrix(s.toDouble(), 0, 3);
-}
-
-void Window::getInput10(QString s)
-{
-    setMatrix(s.toDouble(), 1, 0);
-}
-
-void Window::getInput11(QString s)
-{
-    setMatrix(s.toDouble(), 1, 1);
-}
-
-void Window::getInput12(QString s)
-{
-    setMatrix(s.toDouble(), 1, 3);
-}
-
-void Window::getInput20(QString s)
-{
-    setMatrix(s.toDouble(), 3, 0);
-}
-
-void Window::getInput21(QString s)
-{
-    setMatrix(s.toDouble(), 3, 1);
-}
-
-void Window::getInput22(QString s)
-{
-    setMatrix(s.toDouble(), 3, 3);
+    storeMatrix();
+    ui->widget->sendToShape(inputMatrix);
 }

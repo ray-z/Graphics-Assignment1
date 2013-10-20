@@ -80,6 +80,7 @@ public slots:
     void getInput21(QString);
     void getInput22(QString);
     */
+    void sendToShape(GLdouble m[4][4]);
 };
 
 

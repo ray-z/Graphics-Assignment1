@@ -30,6 +30,8 @@ public:
 
     void testTransformation();
 
+    void transform(GLdouble inputMatrix[4][4]);
+
 private:
     //This is a pure virtual function (indicated by = 0), which is defined by the
     //derived classes, e.g. square. The drawn shape should be centred on (0, 0)

@@ -186,6 +186,26 @@ void shape::calTransformMatrix()
     memcpy(mMatrix, newMatrix, sizeof(mMatrix));
 }
 
+void shape::transform(GLdouble inputMatrix[4][4])
+{
+    GLdouble newMatrix[4][4];
+
+    for(int i=0; i<4; i++)
+    {
+        for(int j=0; j<4; j++)
+        {
+            newMatrix[i][j] = 0;
+            for(int k=0; k<4; k++)
+            {
+                newMatrix[i][j] += mMatrix[i][k] * inputMatrix[k][j];
+            }
+        }
+    }
+    memcpy(mMatrix, newMatrix, sizeof(mMatrix));
+
+}
+
+
 void shape::testTransformation()
 {
 
