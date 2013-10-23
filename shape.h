@@ -29,8 +29,11 @@ public:
     void calTransformMatrix();
 
     void testTransformation();
+    //Transform single matrix
+    void transform(QTransform mat);
 
-    void transform(GLdouble inputMatrix[4][4]);
+    //Transform a list of matrices
+    //void transformList(QStack stack);
 
 private:
     //This is a pure virtual function (indicated by = 0), which is defined by the
@@ -48,7 +51,8 @@ private:
     QColor mSelectedColour;
 
     //Matrix of current status
-    GLdouble mMatrix[4][4];
+    //QStack <QMatrix4x4> totalMat;
+    QMatrix4x4 mMatrix;
     //Matrix from user input
     GLdouble tempMatrix[4][4];
     GLdouble testMatrix[16];

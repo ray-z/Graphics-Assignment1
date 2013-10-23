@@ -30,11 +30,24 @@ private:
     Ui::frmMain *ui;
     //Store input matrix
     GLdouble inputMatrix[4][4];
+    //Store Matrices
+    QStack<QTransform> savedMatrices;
+    //input matrix
+    QTransform inputMat;
+    //Store Mult Matrices
+    QStack<QTransform> multMatrices;
+
 
 public slots:
     //Store input matrix
     void storeMatrix();
     void sendToWidget();
+    //Add Matrix to Mult List
+    void addToMult();
+    //Clear Mult List
+    void clearList();
+    //Send a list of matrix
+    void sendMultToWidget();
 
 private slots:
     void aboutBut();
@@ -44,7 +57,12 @@ private slots:
     //Reset matrix
     void resetMatrix();
     //Set matrix value
-    void setMatrix(QString value, int r, int c);
+    void setTxt(QTransform);
+    //Show selected matrix
+    void showMatrix(int num);
+    //GEt input matrix
+    void getInput();
+
 
 protected:
     // void  resizeEvent(QResizeEvent * );

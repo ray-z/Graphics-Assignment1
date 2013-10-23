@@ -25,7 +25,7 @@ shape::shape(int XCentre, int YCentre, const QColor& colour, const QColor& selec
     mMatrix[3][3] = 1;
     */
 
-    resetMatrix(mMatrix);
+    //resetMatrix(mMatrix);
     resetMatrix(tempMatrix);
 
     //test
@@ -87,7 +87,10 @@ void shape::draw(bool selected)
     //glGetDoublev(GL_MODELVIEW_MATRIX, testMatrix);
     //glMultMatrixd(&mMatrix[0][0]);
     //Opengl Uses column-major matrix ordering
-    glMultTransposeMatrixd(&mMatrix[0][0]);
+
+
+    glMultTransposeMatrixf(mMatrix.data());
+
 
     //Set the colour
     glColor3f(mNormalColour.redF(), mNormalColour.greenF(), mNormalColour.blueF());
@@ -168,6 +171,7 @@ void shape::setTempMatrix(GLdouble value, int r, int c)
     }
 }
 
+/*
 void shape::calTransformMatrix()
 {
     GLdouble newMatrix[4][4];
@@ -185,7 +189,8 @@ void shape::calTransformMatrix()
     }
     memcpy(mMatrix, newMatrix, sizeof(mMatrix));
 }
-
+*/
+/*
 void shape::transform(GLdouble inputMatrix[4][4])
 {
     GLdouble newMatrix[4][4];
@@ -204,8 +209,23 @@ void shape::transform(GLdouble inputMatrix[4][4])
     memcpy(mMatrix, newMatrix, sizeof(mMatrix));
 
 }
+*/
+
+void shape::transform(QTransform mat)
+{
+    QMatrix4x4 mat4(mat);
+
+    mMatrix *=mat4;
 
 
+    //memcpy(mMatrix, mat4, sizeof(mMatrix));
+
+    //glMultMatrixf(myMat4.data());
+}
+
+
+
+/*
 void shape::testTransformation()
 {
 
@@ -227,3 +247,4 @@ void shape::testTransformation()
     }
 
 }
+*/
