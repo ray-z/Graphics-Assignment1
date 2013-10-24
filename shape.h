@@ -52,11 +52,11 @@ private:
     QColor mSelectedColour;
 
     //Matrix of current status
-    //QStack <QMatrix4x4> totalMat;
     QMatrix4x4 mMatrix;
+
     //Matrix from user input
     GLdouble tempMatrix[4][4];
-    GLdouble testMatrix[16];
+
     void resetMatrix(GLdouble m[4][4]);
 };
 

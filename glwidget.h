@@ -66,20 +66,7 @@ public slots:
     void newPolygon();
     //Store sides of polygon
     void storeSides(int i);
-    //Transform using matrix
-    //void transformShape();
-    /*
-    //Store input matrix
-    void getInput00(QString);
-    void getInput01(QString);
-    void getInput02(QString);
-    void getInput10(QString);
-    void getInput11(QString);
-    void getInput12(QString);
-    void getInput20(QString);
-    void getInput21(QString);
-    void getInput22(QString);
-    */
+
     //Send matrix to shape
     void sendToShape(QTransform mat);
     //Send color to shape
