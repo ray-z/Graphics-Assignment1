@@ -241,6 +241,16 @@ void GLWidget::sendToShape(QTransform mat)
     }
 }
 
+void GLWidget::changeColor(QColor c)
+{
+    if(!mSelectedShape.isNull())
+    {
+        mSelectedShape->setColor(c);
+        updateGL();
+
+    }
+}
+
 /*
 void GLWidget::getInput00(QString s)
 {

@@ -14,7 +14,6 @@ Window::Window(QWidget *parent):QDialog(parent)
 	//Setup application interface. Creates all the required components and sliders.
     ui = new Ui::frmMain;
     ui->setupUi(this);
-
     resetMatrix();
     //We need to attach our m_glWidget to glWidgetArea
     //All our drawings will be on glWidgetArea
@@ -216,4 +215,25 @@ void Window::sendMultToWidget()
         ui->widget->sendToShape(tempQStack.top());
         tempQStack.pop_back();
     }
+}
+
+void Window::sendColor()
+{
+    //ui->widget->changeColor();
+
+    //selectedColor.setRedF(1);
+    QColor c;
+    switch(ui->colorBox->currentIndex())
+    {
+        case 0:
+            c.setRedF(1);
+            break;
+        case 1:
+            c.setGreenF(1);
+            break;
+        case 2:
+            c.setBlueF(1);
+            break;
+    }
+    ui->widget->changeColor(c);
 }

@@ -32,8 +32,9 @@ public:
     //Transform single matrix
     void transform(QTransform mat);
 
-    //Transform a list of matrices
-    //void transformList(QStack stack);
+    //Change color
+    void setColor(QColor c);
+
 
 private:
     //This is a pure virtual function (indicated by = 0), which is defined by the
