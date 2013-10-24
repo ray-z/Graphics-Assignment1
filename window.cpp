@@ -212,8 +212,7 @@ void Window::sendMultToWidget()
     QStack<QTransform> tempQStack = multMatrices;
     while(tempQStack.size() != 0)
     {
-        ui->widget->sendToShape(tempQStack.top());
-        tempQStack.pop_back();
+        ui->widget->sendToShape(tempQStack.pop());
     }
 }
 
