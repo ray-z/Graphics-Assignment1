@@ -67,7 +67,7 @@ public slots:
     //Store sides of polygon
     void storeSides(int i);
     //Transform using matrix
-    void transformShape();
+    //void transformShape();
     /*
     //Store input matrix
     void getInput00(QString);
@@ -80,7 +80,7 @@ public slots:
     void getInput21(QString);
     void getInput22(QString);
     */
-    void sendToShape(GLdouble m[4][4]);
+    void sendToShape(QTransform mat);
 };
 
 

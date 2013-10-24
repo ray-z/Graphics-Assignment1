@@ -15,33 +15,12 @@
   </property>
   <layout class="QGridLayout" name="gridLayout">
    <item row="0" column="1">
-    <widget class="GLWidget" name="widget" native="true"/>
-   </item>
-   <item row="0" column="0">
-    <widget class="QFrame" name="frame">
-     <property name="sizePolicy">
-      <sizepolicy hsizetype="Fixed" vsizetype="Preferred">
-       <horstretch>0</horstretch>
-       <verstretch>0</verstretch>
-      </sizepolicy>
-     </property>
-     <property name="minimumSize">
-      <size>
-       <width>180</width>
-       <height>0</height>
-      </size>
-     </property>
-     <property name="frameShape">
-      <enum>QFrame::StyledPanel</enum>
-     </property>
-     <property name="frameShadow">
-      <enum>QFrame::Raised</enum>
-     </property>
+    <widget class="GLWidget" name="widget" native="true">
      <widget class="QWidget" name="verticalLayoutWidget">
       <property name="geometry">
        <rect>
-        <x>10</x>
-        <y>10</y>
+        <x>280</x>
+        <y>20</y>
         <width>161</width>
         <height>197</height>
        </rect>
@@ -106,11 +85,36 @@
        </item>
       </layout>
      </widget>
+     <zorder>frame</zorder>
+     <zorder>verticalLayoutWidget</zorder>
+     <zorder>frame</zorder>
+    </widget>
+   </item>
+   <item row="0" column="0">
+    <widget class="QFrame" name="frame">
+     <property name="sizePolicy">
+      <sizepolicy hsizetype="Fixed" vsizetype="Preferred">
+       <horstretch>0</horstretch>
+       <verstretch>0</verstretch>
+      </sizepolicy>
+     </property>
+     <property name="minimumSize">
+      <size>
+       <width>220</width>
+       <height>0</height>
+      </size>
+     </property>
+     <property name="frameShape">
+      <enum>QFrame::StyledPanel</enum>
+     </property>
+     <property name="frameShadow">
+      <enum>QFrame::Raised</enum>
+     </property>
      <widget class="QWidget" name="gridLayoutWidget">
       <property name="geometry">
        <rect>
-        <x>10</x>
-        <y>290</y>
+        <x>30</x>
+        <y>20</y>
         <width>161</width>
         <height>72</height>
        </rect>
@@ -148,50 +152,158 @@
        </item>
       </layout>
      </widget>
-     <widget class="QWidget" name="gridLayoutWidget_2">
+     <widget class="QWidget" name="gridLayoutWidget_3">
       <property name="geometry">
        <rect>
         <x>10</x>
-        <y>430</y>
-        <width>160</width>
+        <y>110</y>
+        <width>200</width>
         <height>113</height>
        </rect>
       </property>
-      <layout class="QGridLayout" name="gridLayout_3">
-       <item row="1" column="1">
-        <widget class="QLineEdit" name="lineEdit11">
-         <property name="text">
-          <string>1</string>
-         </property>
+      <layout class="QGridLayout" name="gridLayout_4">
+       <item row="1" column="0">
+        <widget class="QDoubleSpinBox" name="dsb10">
          <property name="alignment">
           <set>Qt::AlignCenter</set>
+         </property>
+         <property name="decimals">
+          <number>1</number>
+         </property>
+         <property name="minimum">
+          <double>-100.000000000000000</double>
          </property>
         </widget>
        </item>
-       <item row="1" column="0">
-        <widget class="QLineEdit" name="lineEdit10">
-         <property name="text">
-          <string>0</string>
-         </property>
+       <item row="0" column="1">
+        <widget class="QDoubleSpinBox" name="dsb01">
          <property name="alignment">
           <set>Qt::AlignCenter</set>
+         </property>
+         <property name="decimals">
+          <number>1</number>
+         </property>
+         <property name="minimum">
+          <double>-100.000000000000000</double>
          </property>
         </widget>
        </item>
        <item row="1" column="2">
-        <widget class="QLineEdit" name="lineEdit12">
-         <property name="text">
-          <string>0</string>
-         </property>
+        <widget class="QDoubleSpinBox" name="dsb12">
          <property name="alignment">
           <set>Qt::AlignCenter</set>
+         </property>
+         <property name="decimals">
+          <number>1</number>
+         </property>
+         <property name="minimum">
+          <double>-100.000000000000000</double>
+         </property>
+        </widget>
+       </item>
+       <item row="1" column="1">
+        <widget class="QDoubleSpinBox" name="dsb11">
+         <property name="alignment">
+          <set>Qt::AlignCenter</set>
+         </property>
+         <property name="decimals">
+          <number>1</number>
+         </property>
+         <property name="minimum">
+          <double>-100.000000000000000</double>
+         </property>
+         <property name="value">
+          <double>1.000000000000000</double>
          </property>
         </widget>
        </item>
        <item row="0" column="2">
-        <widget class="QLineEdit" name="lineEdit02">
+        <widget class="QDoubleSpinBox" name="dsb02">
+         <property name="alignment">
+          <set>Qt::AlignCenter</set>
+         </property>
+         <property name="decimals">
+          <number>1</number>
+         </property>
+         <property name="minimum">
+          <double>-100.000000000000000</double>
+         </property>
+        </widget>
+       </item>
+       <item row="0" column="0">
+        <widget class="QDoubleSpinBox" name="dsb00">
+         <property name="alignment">
+          <set>Qt::AlignCenter</set>
+         </property>
+         <property name="decimals">
+          <number>1</number>
+         </property>
+         <property name="minimum">
+          <double>-100.000000000000000</double>
+         </property>
+         <property name="value">
+          <double>1.000000000000000</double>
+         </property>
+        </widget>
+       </item>
+       <item row="2" column="0">
+        <widget class="QDoubleSpinBox" name="dsb20">
+         <property name="alignment">
+          <set>Qt::AlignCenter</set>
+         </property>
+         <property name="decimals">
+          <number>1</number>
+         </property>
+         <property name="minimum">
+          <double>-100.000000000000000</double>
+         </property>
+        </widget>
+       </item>
+       <item row="2" column="1">
+        <widget class="QDoubleSpinBox" name="dsb21">
+         <property name="alignment">
+          <set>Qt::AlignCenter</set>
+         </property>
+         <property name="decimals">
+          <number>1</number>
+         </property>
+         <property name="minimum">
+          <double>-100.000000000000000</double>
+         </property>
+        </widget>
+       </item>
+       <item row="2" column="2">
+        <widget class="QDoubleSpinBox" name="dsb22">
+         <property name="alignment">
+          <set>Qt::AlignCenter</set>
+         </property>
+         <property name="decimals">
+          <number>1</number>
+         </property>
+         <property name="minimum">
+          <double>-100.000000000000000</double>
+         </property>
+         <property name="value">
+          <double>1.000000000000000</double>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+     <widget class="QWidget" name="gridLayoutWidget_2">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>370</y>
+        <width>201</width>
+        <height>161</height>
+       </rect>
+      </property>
+      <layout class="QGridLayout" name="gridLayout_3">
+       <item row="2" column="0" colspan="2">
+        <widget class="QLabel" name="label_3">
          <property name="text">
-          <string>0</string>
+          <string>Transformation List</string>
          </property>
          <property name="alignment">
           <set>Qt::AlignCenter</set>
@@ -199,82 +311,84 @@
         </widget>
        </item>
        <item row="0" column="1">
-        <widget class="QLineEdit" name="lineEdit01">
-         <property name="text">
-          <string>0</string>
-         </property>
-         <property name="alignment">
-          <set>Qt::AlignCenter</set>
-         </property>
-        </widget>
-       </item>
-       <item row="2" column="0">
-        <widget class="QLineEdit" name="lineEdit20">
-         <property name="text">
-          <string>0</string>
-         </property>
-         <property name="alignment">
-          <set>Qt::AlignCenter</set>
-         </property>
-        </widget>
-       </item>
-       <item row="2" column="1">
-        <widget class="QLineEdit" name="lineEdit21">
-         <property name="text">
-          <string>0</string>
-         </property>
-         <property name="alignment">
-          <set>Qt::AlignCenter</set>
-         </property>
-        </widget>
-       </item>
-       <item row="2" column="2">
-        <widget class="QLineEdit" name="lineEdit22">
-         <property name="text">
-          <string>1</string>
-         </property>
+        <widget class="QSpinBox" name="matrixNum">
          <property name="alignment">
           <set>Qt::AlignCenter</set>
          </property>
         </widget>
        </item>
        <item row="0" column="0">
-        <widget class="QLineEdit" name="lineEdit00">
+        <widget class="QLabel" name="label_2">
          <property name="text">
-          <string>1</string>
+          <string>Saved Matrices</string>
+         </property>
+        </widget>
+       </item>
+       <item row="3" column="0" colspan="2">
+        <widget class="QLineEdit" name="transList">
+         <property name="enabled">
+          <bool>false</bool>
          </property>
          <property name="alignment">
           <set>Qt::AlignCenter</set>
          </property>
         </widget>
        </item>
+       <item row="1" column="0" colspan="2">
+        <widget class="QPushButton" name="pushButton_4">
+         <property name="text">
+          <string>Add to Transformation</string>
+         </property>
+        </widget>
+       </item>
+       <item row="4" column="0">
+        <widget class="QPushButton" name="pushButton_5">
+         <property name="text">
+          <string>Transform</string>
+         </property>
+        </widget>
+       </item>
+       <item row="4" column="1">
+        <widget class="QPushButton" name="pushButton_6">
+         <property name="text">
+          <string>Clear</string>
+         </property>
+        </widget>
+       </item>
       </layout>
      </widget>
-     <widget class="QPushButton" name="pushButton_2">
+     <widget class="QWidget" name="verticalLayoutWidget_2">
       <property name="geometry">
        <rect>
-        <x>30</x>
-        <y>560</y>
-        <width>111</width>
-        <height>31</height>
+        <x>20</x>
+        <y>240</y>
+        <width>171</width>
+        <height>107</height>
        </rect>
       </property>
-      <property name="text">
-       <string>Transform</string>
-      </property>
-     </widget>
-     <widget class="QPushButton" name="pushButton_3">
-      <property name="geometry">
-       <rect>
-        <x>30</x>
-        <y>600</y>
-        <width>111</width>
-        <height>31</height>
-       </rect>
-      </property>
-      <property name="text">
-       <string>Store</string>
-      </property>
+      <layout class="QVBoxLayout" name="verticalLayout">
+       <item>
+        <widget class="QPushButton" name="pushButton_2">
+         <property name="text">
+          <string>Transform</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QPushButton" name="pushButton_3">
+         <property name="text">
+          <string>Store</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QPushButton" name="pushButton_7">
+         <property name="text">
+          <string>Reset</string>
+         </property>
+        </widget>
+       </item>
+      </layout>
      </widget>
     </widget>
    </item>
@@ -314,8 +428,8 @@
    <slot>pressmebut()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>174</x>
-     <y>133</y>
+     <x>670</x>
+     <y>143</y>
     </hint>
     <hint type="destinationlabel">
      <x>190</x>
@@ -330,8 +444,8 @@
    <slot>aboutBut()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>82</x>
-     <y>153</y>
+     <x>578</x>
+     <y>163</y>
     </hint>
     <hint type="destinationlabel">
      <x>190</x>
@@ -346,8 +460,8 @@
    <slot>close()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>133</x>
-     <y>185</y>
+     <x>629</x>
+     <y>195</y>
     </hint>
     <hint type="destinationlabel">
      <x>193</x>
@@ -362,11 +476,11 @@
    <slot>newSquare()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>174</x>
-     <y>27</y>
+     <x>670</x>
+     <y>37</y>
     </hint>
     <hint type="destinationlabel">
-     <x>202</x>
+     <x>242</x>
      <y>30</y>
     </hint>
    </hints>
@@ -378,11 +492,11 @@
    <slot>newCircle()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>161</x>
-     <y>59</y>
+     <x>657</x>
+     <y>69</y>
     </hint>
     <hint type="destinationlabel">
-     <x>229</x>
+     <x>269</x>
      <y>55</y>
     </hint>
    </hints>
@@ -394,11 +508,11 @@
    <slot>newPolygon()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>123</x>
-     <y>369</y>
+     <x>143</x>
+     <y>99</y>
     </hint>
     <hint type="destinationlabel">
-     <x>234</x>
+     <x>274</x>
      <y>338</y>
     </hint>
    </hints>
@@ -410,11 +524,11 @@
    <slot>storeSides(int)</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>154</x>
-     <y>326</y>
+     <x>174</x>
+     <y>56</y>
     </hint>
     <hint type="destinationlabel">
-     <x>218</x>
+     <x>258</x>
      <y>290</y>
     </hint>
    </hints>
@@ -426,8 +540,8 @@
    <slot>storeMatrix()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>115</x>
-     <y>625</y>
+     <x>106</x>
+     <y>303</y>
     </hint>
     <hint type="destinationlabel">
      <x>193</x>
@@ -442,12 +556,92 @@
    <slot>sendToWidget()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>133</x>
-     <y>587</y>
+     <x>124</x>
+     <y>268</y>
     </hint>
     <hint type="destinationlabel">
      <x>191</x>
      <y>569</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>matrixNum</sender>
+   <signal>valueChanged(int)</signal>
+   <receiver>frmMain</receiver>
+   <slot>showMatrix(int)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>215</x>
+     <y>397</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>230</x>
+     <y>356</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>pushButton_7</sender>
+   <signal>clicked()</signal>
+   <receiver>frmMain</receiver>
+   <slot>resetTxt()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>91</x>
+     <y>340</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>232</x>
+     <y>319</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>pushButton_4</sender>
+   <signal>clicked()</signal>
+   <receiver>frmMain</receiver>
+   <slot>addToMult()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>167</x>
+     <y>423</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>232</x>
+     <y>430</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>pushButton_6</sender>
+   <signal>clicked()</signal>
+   <receiver>frmMain</receiver>
+   <slot>clearList()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>185</x>
+     <y>526</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>233</x>
+     <y>510</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>pushButton_5</sender>
+   <signal>clicked()</signal>
+   <receiver>frmMain</receiver>
+   <slot>sendMultToWidget()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>80</x>
+     <y>527</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>232</x>
+     <y>647</y>
     </hint>
    </hints>
   </connection>
@@ -474,5 +668,10 @@
   <slot>txt99()</slot>
   <slot>storeMatrix()</slot>
   <slot>sendToWidget()</slot>
+  <slot>showMatrix(int)</slot>
+  <slot>resetTxt()</slot>
+  <slot>addToMult()</slot>
+  <slot>clearList()</slot>
+  <slot>sendMultToWidget()</slot>
  </slots>
 </ui>

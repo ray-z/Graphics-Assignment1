@@ -206,6 +206,7 @@ void GLWidget::storeSides(int i)
     pSides = i;
 }
 
+/*
 void GLWidget::transformShape()
 {
     if(!mSelectedShape.isNull())
@@ -215,12 +216,25 @@ void GLWidget::transformShape()
         updateGL();
     }
 }
-
+*/
+/*
 void GLWidget::sendToShape(GLdouble m[4][4])
 {
     if(!mSelectedShape.isNull())
     {
         mSelectedShape->transform(m);
+        //mSelectedShape->testTransformation();
+        updateGL();
+
+    }
+}
+*/
+
+void GLWidget::sendToShape(QTransform mat)
+{
+    if(!mSelectedShape.isNull())
+    {
+        mSelectedShape->transform(mat);
         //mSelectedShape->testTransformation();
         updateGL();
 
