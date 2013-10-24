@@ -37,7 +37,6 @@ private:
     //Store Mult Matrices
     QStack<QTransform> multMatrices;
 
-
 public slots:
     //Store input matrix
     void storeMatrix();
@@ -48,6 +47,8 @@ public slots:
     void clearList();
     //Send a list of matrix
     void sendMultToWidget();
+    //Send color
+    void sendColor();
 
 private slots:
     void aboutBut();

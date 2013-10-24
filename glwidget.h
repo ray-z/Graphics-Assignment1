@@ -80,7 +80,10 @@ public slots:
     void getInput21(QString);
     void getInput22(QString);
     */
+    //Send matrix to shape
     void sendToShape(QTransform mat);
+    //Send color to shape
+    void changeColor(QColor c);
 };
 
 

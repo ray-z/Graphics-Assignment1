@@ -85,9 +85,6 @@
        </item>
       </layout>
      </widget>
-     <zorder>frame</zorder>
-     <zorder>verticalLayoutWidget</zorder>
-     <zorder>frame</zorder>
     </widget>
    </item>
    <item row="0" column="0">
@@ -296,7 +293,7 @@
         <x>10</x>
         <y>370</y>
         <width>201</width>
-        <height>161</height>
+        <height>175</height>
        </rect>
       </property>
       <layout class="QGridLayout" name="gridLayout_3">
@@ -386,6 +383,47 @@
          <property name="text">
           <string>Reset</string>
          </property>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+     <widget class="QWidget" name="gridLayoutWidget_4">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>590</y>
+        <width>201</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <layout class="QGridLayout" name="gridLayout_5">
+       <item row="0" column="1">
+        <widget class="QPushButton" name="pushButton_8">
+         <property name="text">
+          <string>Change Color</string>
+         </property>
+        </widget>
+       </item>
+       <item row="0" column="0">
+        <widget class="QComboBox" name="colorBox">
+         <property name="currentText">
+          <string>Red</string>
+         </property>
+         <item>
+          <property name="text">
+           <string>Red</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Green</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Blue</string>
+          </property>
+         </item>
         </widget>
        </item>
       </layout>
@@ -645,6 +683,22 @@
     </hint>
    </hints>
   </connection>
+  <connection>
+   <sender>pushButton_8</sender>
+   <signal>clicked()</signal>
+   <receiver>frmMain</receiver>
+   <slot>sendColor()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>155</x>
+     <y>617</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>230</x>
+     <y>681</y>
+    </hint>
+   </hints>
+  </connection>
  </connections>
  <slots>
   <slot>colourHex()</slot>
@@ -673,5 +727,6 @@
   <slot>addToMult()</slot>
   <slot>clearList()</slot>
   <slot>sendMultToWidget()</slot>
+  <slot>sendColor()</slot>
  </slots>
 </ui>

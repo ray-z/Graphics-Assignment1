@@ -91,7 +91,6 @@ void shape::draw(bool selected)
 
     glMultTransposeMatrixf(mMatrix.data());
 
-
     //Set the colour
     glColor3f(mNormalColour.redF(), mNormalColour.greenF(), mNormalColour.blueF());
 
@@ -221,6 +220,13 @@ void shape::transform(QTransform mat)
     //memcpy(mMatrix, mat4, sizeof(mMatrix));
 
     //glMultMatrixf(myMat4.data());
+}
+
+void shape::setColor(QColor c)
+{
+    //mNormalColour.black();
+    //mNormalColour.setRedF(0);
+    mNormalColour = c;
 }
 
 
