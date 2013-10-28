@@ -216,7 +216,11 @@ void shape::transform(QTransform mat)
 
     mMatrix *=mat4;
 
+    //qDebug() << mMatrix.toTransform().m33();
 
+    translateBy(mMatrix.toTransform().m13(), mMatrix.toTransform().m23());
+
+    //setRadius(mMatrix.toTransform().m33());
     //memcpy(mMatrix, mat4, sizeof(mMatrix));
 
     //glMultMatrixf(myMat4.data());

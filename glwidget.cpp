@@ -235,7 +235,7 @@ void GLWidget::sendToShape(QTransform mat)
     if(!mSelectedShape.isNull())
     {
         mSelectedShape->transform(mat);
-        //mSelectedShape->testTransformation();
+
         updateGL();
 
     }
