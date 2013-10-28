@@ -113,7 +113,7 @@ void shape::transform(QTransform mat)
 
     mMatrix *=mat4;
 
-    translateBy(mMatrix.toTransform().m13(), mMatrix.toTransform().m23());
+    //translateBy(mMatrix.toTransform().m13(), mMatrix.toTransform().m23());
 }
 
 void shape::setColor(QColor c)
