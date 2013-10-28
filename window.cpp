@@ -38,53 +38,6 @@ void Window::aboutBut()
     QMessageBox::information( this, title, mess, QMessageBox::Ok );
 }
 
-//bool Window::checkData(QString tempStr, double *num)
-//{
-//    bool validate;
-////no error message
-//    *num = tempStr.toDouble(&validate);
-//    if (validate == false) *num =0.0;
-//    return validate;
-//}
-
-//void Window::txt0()
-//{
-//    double a;
-//    if ( checkData(mat[0], &a) ) cerr << "data ok  ";
-//    cerr << "a="<<a NL;
-//}
-
-//void Window::txt0(QString a)
-//{
-//    mat[0]=a;
-//}
-
-//void Window::txt9(QString a)
-//{
-//    mat[9]=a;
-//    cerr << "Input string\n";
-//}
-
-//void Window::txt99()
-//{
-//    double a;
-//    if ( checkData(mat[9], &a) ) cerr << "9data ok  ";
-//    cerr << "a="<<a NL;
-//     QMessageBox::information( this, "QtGl: ", mat[9], QMessageBox::Ok );
-//}
-
-//void Window::txt1()
-//{
-//    double a;
-//    if ( checkData(mat[1], &a) ) cerr << "data ok  ";
-//        cerr << "a="<<a NL;
-//}
-
-//void Window::txt1(QString a)
-//{
-//    mat[1]=a;
-//}
-
 void Window::pressmebut()
 {
     std::cerr << "Don't press me!";
@@ -146,24 +99,6 @@ void Window::getInput()
 
 void Window::storeMatrix()
 {
-    /*
-    setMatrix(ui->lineEdit00->text(), 0, 0);
-    setMatrix(ui->lineEdit01->text(), 0, 1);
-    setMatrix(ui->lineEdit02->text(), 0, 3);
-    setMatrix(ui->lineEdit10->text(), 1, 0);
-    setMatrix(ui->lineEdit11->text(), 1, 1);
-    setMatrix(ui->lineEdit12->text(), 1, 3);
-    setMatrix(ui->lineEdit20->text(), 3, 0);
-    setMatrix(ui->lineEdit21->text(), 3, 1);
-    setMatrix(ui->lineEdit22->text(), 3, 3);
-    //resetTxt();
-    */
-    /*
-    inputMat.setMatrix(ui->dsb00->value(), ui->dsb01->value(), ui->dsb02->value(),
-                        ui->dsb10->value(), ui->dsb11->value(), ui->dsb12->value(),
-                        ui->dsb20->value(), ui->dsb21->value(), ui->dsb22->value());
-    */
-
     getInput();
     savedMatrices.push_back(inputMat);
 
@@ -218,9 +153,6 @@ void Window::sendMultToWidget()
 
 void Window::sendColor()
 {
-    //ui->widget->changeColor();
-
-    //selectedColor.setRedF(1);
     QColor c;
     switch(ui->colorBox->currentIndex())
     {

@@ -16,75 +16,7 @@
   <layout class="QGridLayout" name="gridLayout">
    <item row="0" column="1">
     <widget class="GLWidget" name="widget" native="true">
-     <widget class="QWidget" name="verticalLayoutWidget">
-      <property name="geometry">
-       <rect>
-        <x>280</x>
-        <y>20</y>
-        <width>161</width>
-        <height>197</height>
-       </rect>
-      </property>
-      <layout class="QVBoxLayout" name="verticalLayout_2">
-       <property name="spacing">
-        <number>0</number>
-       </property>
-       <property name="sizeConstraint">
-        <enum>QLayout::SetNoConstraint</enum>
-       </property>
-       <item>
-        <widget class="QPushButton" name="newSquarePushButton">
-         <property name="text">
-          <string>New Square</string>
-         </property>
-        </widget>
-       </item>
-       <item>
-        <widget class="QPushButton" name="newCirclePushButton">
-         <property name="text">
-          <string>New Circle</string>
-         </property>
-        </widget>
-       </item>
-       <item>
-        <spacer name="verticalSpacer_2">
-         <property name="orientation">
-          <enum>Qt::Vertical</enum>
-         </property>
-         <property name="sizeType">
-          <enum>QSizePolicy::Fixed</enum>
-         </property>
-         <property name="sizeHint" stdset="0">
-          <size>
-           <width>20</width>
-           <height>40</height>
-          </size>
-         </property>
-        </spacer>
-       </item>
-       <item>
-        <widget class="QPushButton" name="pressMePushButton">
-         <property name="text">
-          <string>Press Me</string>
-         </property>
-        </widget>
-       </item>
-       <item>
-        <widget class="QPushButton" name="aboutPushButton">
-         <property name="text">
-          <string>About</string>
-         </property>
-        </widget>
-       </item>
-       <item>
-        <widget class="QPushButton" name="quitPushButton">
-         <property name="text">
-          <string>Quit</string>
-         </property>
-        </widget>
-       </item>
-      </layout>
-     </widget>
+     <zorder>frame</zorder>
     </widget>
    </item>
    <item row="0" column="0">
@@ -428,6 +360,19 @@
        </item>
       </layout>
      </widget>
+     <widget class="QPushButton" name="quitPushButton">
+      <property name="geometry">
+       <rect>
+        <x>30</x>
+        <y>780</y>
+        <width>159</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Quit</string>
+      </property>
+     </widget>
     </widget>
    </item>
   </layout>
@@ -460,38 +405,6 @@
  <resources/>
  <connections>
   <connection>
-   <sender>pressMePushButton</sender>
-   <signal>clicked()</signal>
-   <receiver>frmMain</receiver>
-   <slot>pressmebut()</slot>
-   <hints>
-    <hint type="sourcelabel">
-     <x>670</x>
-     <y>143</y>
-    </hint>
-    <hint type="destinationlabel">
-     <x>190</x>
-     <y>138</y>
-    </hint>
-   </hints>
-  </connection>
-  <connection>
-   <sender>aboutPushButton</sender>
-   <signal>clicked()</signal>
-   <receiver>frmMain</receiver>
-   <slot>aboutBut()</slot>
-   <hints>
-    <hint type="sourcelabel">
-     <x>578</x>
-     <y>163</y>
-    </hint>
-    <hint type="destinationlabel">
-     <x>190</x>
-     <y>185</y>
-    </hint>
-   </hints>
-  </connection>
-  <connection>
    <sender>quitPushButton</sender>
    <signal>clicked()</signal>
    <receiver>frmMain</receiver>
@@ -504,38 +417,6 @@
     <hint type="destinationlabel">
      <x>193</x>
      <y>234</y>
-    </hint>
-   </hints>
-  </connection>
-  <connection>
-   <sender>newSquarePushButton</sender>
-   <signal>clicked()</signal>
-   <receiver>widget</receiver>
-   <slot>newSquare()</slot>
-   <hints>
-    <hint type="sourcelabel">
-     <x>670</x>
-     <y>37</y>
-    </hint>
-    <hint type="destinationlabel">
-     <x>242</x>
-     <y>30</y>
-    </hint>
-   </hints>
-  </connection>
-  <connection>
-   <sender>newCirclePushButton</sender>
-   <signal>clicked()</signal>
-   <receiver>widget</receiver>
-   <slot>newCircle()</slot>
-   <hints>
-    <hint type="sourcelabel">
-     <x>657</x>
-     <y>69</y>
-    </hint>
-    <hint type="destinationlabel">
-     <x>269</x>
-     <y>55</y>
     </hint>
    </hints>
   </connection>
